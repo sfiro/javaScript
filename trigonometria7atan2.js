@@ -1,5 +1,5 @@
 //  Se crea una flecha la cual apunta al cursor del mouse ( se usa la función ATAN2 la cual calcula el angulo que debe rotar la flecha)  IMPORTANTE se debe usar ATAN2 <<-- esta función entrega el angulo adecuado en los 360 grados
-
+// se usa una funcion addEventListener el cual ejecuta una interrupción por cada movimiento del mouse
 window.onload=function(){
 var canvas = document.getElementById("canvas");
   context = canvas.getContext("2d"),
