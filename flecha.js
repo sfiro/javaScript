@@ -1,4 +1,4 @@
-//  Se crea una flecha que tiene rotacion y dirección y se controla con las flechas del teclado
+//  Se crea una flecha que tiene rotacion y dirección y se controla con las flechas del teclado - cuando se presiona la tecla hacia adelante sale una recta en la parte de atras de la "nave"
 
 window.onload=function(){
 var canvas = document.getElementById("canvas");
@@ -184,6 +184,11 @@ var canvas = document.getElementById("canvas");
      context.lineTo(-10,-7);
      context.lineTo(-10,7);
      context.lineTo(10,0);
+     if(thrusting){
+     	context.moveTo(-10,0);
+      context.lineTo(-50,0);
+     }
+     
      context.stroke();
      context.restore();
      
