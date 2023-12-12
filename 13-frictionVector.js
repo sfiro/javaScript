@@ -77,9 +77,6 @@ var canvas = document.getElementById("canvas");
      context.beginPath();
      context.arc(ship.position.getX(),ship.position.getY(),ship.radius,0,Math.PI*2,false);
      context.fill();
-
-   
-     
      requestAnimationFrame(update);
    }
 
