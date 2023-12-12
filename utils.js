@@ -14,8 +14,8 @@ var utils = {
 
     map: function(value,sourceMin,sourceMax,destMin,destMax){
         // map a value from one range to another
-        var n = norm(value,sourceMin,sourceMax);
-        return lerp(n,destMin,destMax)
+        var n = utils.norm(value,sourceMin,sourceMax);
+        return utils.lerp(n,destMin,destMax)
     },
 
     clamp: function(value,min,max){
@@ -42,18 +42,18 @@ var utils = {
 
     circleCollision: function(c0,c1){
         // circle collision detection
-        return distance(c0,c1) <= c0.radius +  c1.radius;
+        return utils.distance(c0,c1) <= c0.radius +  c1.radius;
     },
 
     circlePointCollision: function(x,y,circle){
         // circle-point collision detection
-        return distanceXY(x, y, circle.x, circle.y) < circle.radius; 
+        return utils.distanceXY(x, y, circle.x, circle.y) < circle.radius; 
     },
 
     pointInRect: function(x,y,rect){
         // point-rectangle collision detection
-        return inRange(x,rect.x,rect.x+rect.width) && 
-               inRange(y, rect.y, rect.y+rect.height);
+        return utils.inRange(x,rect.x,rect.x+rect.width) && 
+               utils.inRange(y, rect.y, rect.y+rect.height);
     },
 
     inRange: function (value,min,max){
@@ -68,8 +68,8 @@ var utils = {
     },
     rectIntersect: function(r0, r1){
         // rectangle intersection
-        return rangeIntersect(r0.x, r0.x+r0.width, r1.x, r1.x+r1.width) &&
-               rangeIntersect(r0.y, r0.y+r0.height, r1.y, r1.y+r1.height);
+        return utils.rangeIntersect(r0.x, r0.x+r0.width, r1.x, r1.x+r1.width) &&
+               utils.rangeIntersect(r0.y, r0.y+r0.height, r1.y, r1.y+r1.height);
     },
     randomRange: function(min,max){
         // random range
