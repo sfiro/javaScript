@@ -70,5 +70,14 @@ var utils = {
         // rectangle intersection
         return rangeIntersect(r0.x, r0.x+r0.width, r1.x, r1.x+r1.width) &&
                rangeIntersect(r0.y, r0.y+r0.height, r1.y, r1.y+r1.height);
-    }
+    },
+    randomRange: function(min,max){
+        // random range
+        return min + Math.random()*(max-min);
+    },
+    randomInt: function(min,max){
+        // random integer
+        return Math.floor(min+Math.random()*(max-min+1));
+    },
+    
 };
