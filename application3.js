@@ -2,6 +2,7 @@
 // se usan las interrupciones del mouse, al presionar y al dejar de presionar 
 // así se calcula un angulo en el cual será dirigido un cañon 
 // se crea la bala la cual sale disparada al momento de presionar la barra espaciadora 
+// de agrega la opcíon de elegir la fuerza con la que se dispara la bala
 
 window.onload=function(){
     var canvas = document.getElementById("canvas");

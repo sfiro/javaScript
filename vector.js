@@ -1,6 +1,5 @@
 // objective: create a vector object
 
-
 var vector = {
     _x: 1,
     _y: 0,
@@ -32,14 +31,18 @@ var vector = {
     getAngle: function(){
         return Math.atan2(this._y, this._x);
     },
+
     setLength: function(length){
         var angle = this.getAngle();
         this._x = Math.cos(angle)*length;
         this._y = Math.sin(angle)*length;
     },
+
     getLength: function(){
-        return Math.sqrt(this._x*this._x + this._y*this._y);
+        return Math.sqrt(this._x * this._x + this._y * this._y);
+        console.log(this._x, this._y)
     },
+
     add: function(v2){
         return vector.create(this._x+v2.getX(),this._y+v2.getY())
     },
@@ -47,8 +50,9 @@ var vector = {
         return vector.create(this._x-v2.getX(),this._y-v2.getY())
     },
     multiply: function(v2){
-        return vector.create(this._x*v2.getX(),this._y*v2.getY())
+        return vector.create(this._x * v2, this._y * v2)
     },
+
     divide: function(v2){
         return vector.create(this._x/v2.getX(),this._y/v2.getY())
     },

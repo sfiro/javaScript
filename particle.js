@@ -16,6 +16,7 @@ var particle = {
     mass: 1,
     radius: 0,
     bounce: -1,
+    friction: 1,
 
     create: function(x,y,speed,direction,grav){
         var obj = Object.create(this);
@@ -32,6 +33,7 @@ var particle = {
     },
 
     update: function(){
+        this.velocity.multiplyBy(this.friction)
         this.velocity.addTo(this.gravity)
         this.position.addTo(this.velocity)
     }
