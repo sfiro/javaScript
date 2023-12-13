@@ -87,5 +87,15 @@ var utils = {
         // radians to degrees
         return radians*180/Math.PI;
     },
+
+    roundToPlaces: function(value, places){
+        // round to places
+        var mult = Math.pow(10,places);
+        return Math.round(value*mult)/mult;
+    },
+    roundNearest: function(value,nearest){
+        // round to nearest
+        return Math.round(value/nearest)*nearest;
+    },
     
 };
