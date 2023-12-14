@@ -1,4 +1,4 @@
-// sistema de resorte y masa, que se puede controlar con el mouse 
+// rounding to the nearest multiple of a number
 
 window.onload=function(){
     var canvas = document.getElementById("canvas");
