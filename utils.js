@@ -97,5 +97,13 @@ var utils = {
         // round to nearest
         return Math.round(value/nearest)*nearest;
     },
-    
+    randomDist: function(min,max,iterations){
+        var total = 0;
+
+        for(var i=0; i<iterations; i++){
+            total += utils.randomRange(min,max);
+        }
+        return total/iterations;
+    },
+
 };
