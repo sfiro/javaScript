@@ -143,7 +143,7 @@ window.onload=function(){
       var p = points[arguments[0]];
      	context.moveTo(p.sx, p.sy);
       
-      for(var i=1; i< points.length; i++){
+      for(var i=1; i< arguments.length; i++){
       	p = points[arguments[i]];
         context.lineTo(p.sx,p.sy);
       }
